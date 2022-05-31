@@ -27,4 +27,11 @@ export class GrafanaService {
             );
     }
 
+    getGrafanaAlertRulesTest(){
+        return this.httpService.get('https://spitzer.dev.cnp.ikeadt.com/api/prometheus/grafana/api/v1/alerts', {headers: this.headersRequest})
+            .pipe(
+                map(response => response.data)
+            );
+    }
+
 }

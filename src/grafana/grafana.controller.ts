@@ -17,4 +17,9 @@ export class GrafanaController {
         return this.grafanaService.getGrafanaApiServerDashboard();
     }
 
+    @Get('alert-rules')
+    getAlertRulesTest(){
+        return this.grafanaService.getGrafanaAlertRulesTest();
+    }
+
 }
