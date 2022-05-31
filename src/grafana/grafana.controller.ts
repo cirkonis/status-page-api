@@ -8,7 +8,13 @@ export class GrafanaController {
     }
 
     @Get('home')
-    getHomeInfo(){
-       return this.grafanaService.getGrafanaHome();
+    getHomeInfo() {
+        return this.grafanaService.getGrafanaHome();
     }
+
+    @Get('api-server')
+    getApiServerInfo() {
+        return this.grafanaService.getGrafanaApiServerDashboard();
+    }
+
 }
