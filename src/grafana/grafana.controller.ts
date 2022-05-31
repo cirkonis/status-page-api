@@ -1,0 +1,14 @@
+import {Controller, Get} from '@nestjs/common';
+import {GrafanaService} from "./grafana.service";
+
+@Controller('grafana')
+export class GrafanaController {
+
+    constructor(private readonly grafanaService: GrafanaService) {
+    }
+
+    @Get('home')
+    getHomeInfo(){
+       return this.grafanaService.getGrafanaHome();
+    }
+}
